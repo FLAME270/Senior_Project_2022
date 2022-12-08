@@ -1,0 +1,46 @@
+{
+    "sourceFile": "frontend/redux/reducers/user.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1668737034032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668737041121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     chats: [],\n     following: [],\n }\n \n-\n+//Updates the user \n export const user = (state = initialState, action) => {\n     switch (action.type) {\n         case USER_STATE_CHANGE:\n             return {\n"
+                },
+                {
+                    "date": 1668737047274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     chats: [],\n     following: [],\n }\n \n-//Updates the user \n+//Updates the user state from the \n export const user = (state = initialState, action) => {\n     switch (action.type) {\n         case USER_STATE_CHANGE:\n             return {\n"
+                },
+                {
+                    "date": 1668737054187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     chats: [],\n     following: [],\n }\n \n-//Updates the user state from the \n+//Updates the user state from the constants class\n export const user = (state = initialState, action) => {\n     switch (action.type) {\n         case USER_STATE_CHANGE:\n             return {\n"
+                },
+                {
+                    "date": 1668737068982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import { CLEAR_DATA, USER_CHATS_STATE_CHANGE, USER_FOLLOWING_STATE_CHANGE, USER_POSTS_STATE_CHANGE, USER_STATE_CHANGE } from \"../constants\"\n \n+//\n const initialState = {\n     currentUser: null,\n     posts: [],\n     chats: [],\n"
+                },
+                {
+                    "date": 1668737076858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { CLEAR_DATA, USER_CHATS_STATE_CHANGE, USER_FOLLOWING_STATE_CHANGE, USER_POSTS_STATE_CHANGE, USER_STATE_CHANGE } from \"../constants\"\n \n-//\n+//Loads the initial state\n const initialState = {\n     currentUser: null,\n     posts: [],\n     chats: [],\n"
+                },
+                {
+                    "date": 1668737085767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { CLEAR_DATA, USER_CHATS_STATE_CHANGE, USER_FOLLOWING_STATE_CHANGE, USER_POSTS_STATE_CHANGE, USER_STATE_CHANGE } from \"../constants\"\n \n-//Loads the initial state\n+//Loads the initial state, then makes the \n const initialState = {\n     currentUser: null,\n     posts: [],\n     chats: [],\n"
+                },
+                {
+                    "date": 1668737091067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { CLEAR_DATA, USER_CHATS_STATE_CHANGE, USER_FOLLOWING_STATE_CHANGE, USER_POSTS_STATE_CHANGE, USER_STATE_CHANGE } from \"../constants\"\n \n-//Loads the initial state, then makes the \n+//Loads the initial state, then makes the updated changes\n const initialState = {\n     currentUser: null,\n     posts: [],\n     chats: [],\n"
+                }
+            ],
+            "date": 1668737034032,
+            "name": "Commit-0",
+            "content": "import { CLEAR_DATA, USER_CHATS_STATE_CHANGE, USER_FOLLOWING_STATE_CHANGE, USER_POSTS_STATE_CHANGE, USER_STATE_CHANGE } from \"../constants\"\n\nconst initialState = {\n    currentUser: null,\n    posts: [],\n    chats: [],\n    following: [],\n}\n\n\nexport const user = (state = initialState, action) => {\n    switch (action.type) {\n        case USER_STATE_CHANGE:\n            return {\n                ...state,\n                currentUser: action.currentUser\n            }\n        case USER_POSTS_STATE_CHANGE:\n            return {\n                ...state,\n                posts: action.posts\n            }\n\n        case USER_FOLLOWING_STATE_CHANGE:\n            return {\n                ...state,\n                following: action.following\n            }\n        case USER_CHATS_STATE_CHANGE: {\n            return {\n                ...state,\n                chats: action.chats\n            }\n        }\n        case CLEAR_DATA:\n            return initialState\n        default:\n            return state;\n    }\n}"
+        }
+    ]
+}

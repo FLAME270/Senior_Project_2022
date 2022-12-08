@@ -1,0 +1,38 @@
+{
+    "sourceFile": "admin/src/reportWebVitals.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1665055135798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1665055146567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n-\n+/*Tyler Wiggins\n+This is my own work\n+Senior Project 2022\n+File Description: Calls the report w\n+*/\n const reportWebVitals = onPerfEntry => {\n   if (onPerfEntry && onPerfEntry instanceof Function) {\n     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {\n       getCLS(onPerfEntry);\n"
+                },
+                {
+                    "date": 1665055154671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n /*Tyler Wiggins\n This is my own work\n Senior Project 2022\n-File Description: Calls the report w\n+File Description: Calls \n */\n const reportWebVitals = onPerfEntry => {\n   if (onPerfEntry && onPerfEntry instanceof Function) {\n     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {\n"
+                },
+                {
+                    "date": 1665055164767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n /*Tyler Wiggins\n This is my own work\n Senior Project 2022\n-File Description: Calls \n+File Description: Calls a function that reports\n */\n const reportWebVitals = onPerfEntry => {\n   if (onPerfEntry && onPerfEntry instanceof Function) {\n     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {\n"
+                },
+                {
+                    "date": 1665055174345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n /*Tyler Wiggins\n This is my own work\n Senior Project 2022\n-File Description: Calls a function that reports\n+File Description: Calls a function that reports web vitals \n */\n const reportWebVitals = onPerfEntry => {\n   if (onPerfEntry && onPerfEntry instanceof Function) {\n     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {\n"
+                },
+                {
+                    "date": 1665055187730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n /*Tyler Wiggins\n This is my own work\n Senior Project 2022\n-File Description: Calls a function that reports web vitals \n+File Description: Calls a function that reports web vitals when certian conditions are met\n */\n const reportWebVitals = onPerfEntry => {\n   if (onPerfEntry && onPerfEntry instanceof Function) {\n     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {\n"
+                }
+            ],
+            "date": 1665055135798,
+            "name": "Commit-0",
+            "content": "\nconst reportWebVitals = onPerfEntry => {\n  if (onPerfEntry && onPerfEntry instanceof Function) {\n    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {\n      getCLS(onPerfEntry);\n      getFID(onPerfEntry);\n      getFCP(onPerfEntry);\n      getLCP(onPerfEntry);\n      getTTFB(onPerfEntry);\n    });\n  }\n};\n\nexport default reportWebVitals;\n"
+        }
+    ]
+}

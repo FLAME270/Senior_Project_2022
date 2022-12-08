@@ -1,0 +1,22 @@
+{
+    "sourceFile": "redux/actions/reducers/constants/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1668737791294,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668737804722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import {conbineReducers} from 'redux'\r\n import {user} from '/user'\r\n \r\n-//Conbine all the reducers into one function\r\n+//Conbine all the reducers into one function.\r\n const Reducers = conbineReducers({\r\n     userState: user\r\n })\r\n export default Reducers\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1668737791294,
+            "name": "Commit-0",
+            "content": "import {conbineReducers} from 'redux'\r\nimport {user} from '/user'\r\n\r\n//Conbine \r\nconst Reducers = conbineReducers({\r\n    userState: user\r\n})\r\nexport default Reducers"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "admin/src/components/Users.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1668733507555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1668733507555,
+            "name": "Commit-0",
+            "content": "/*Tyler Wiggins\nThis is my own work\nSenior Project 2022\nFile Description: Displays a list of users, so that admins can manage and make changes to a users account.\n*/\nimport React, { useEffect, useState } from 'react'\n\nimport firebase from 'firebase/app';\nimport 'firebase/firestore';\n\nimport { DataGrid } from '@material-ui/data-grid';\nimport Chip from '@material-ui/core/Chip';\nimport { Clear, Check } from '@material-ui/icons';\nimport DoneIcon from '@material-ui/icons/Done';\nimport Button from '@material-ui/core/Button';\nimport { useHistory } from \"react-router-dom\";\n\n//Gets all the users from the database.\nexport default function Users() {\n    const [users, setUsers] = useState([])\n    useEffect(() => {\n        firebase.firestore()\n            .collection(\"users\")\n\n            .onSnapshot((snapshot) => {\n                let result = snapshot.docs.map(doc => {\n                    const data = doc.data();\n                    const id = doc.id;\n                    return { id, ...data }\n                })\n                setUsers(result)\n            })\n    }, [])\n    const history = useHistory();\n//List a grid of users and has a button that lets you edit a user.\n    const columns = [\n        { field: 'id', headerName: 'ID', width: 280 },\n        { field: 'name', headerName: 'Name', width: 130 },\n        { field: 'username', headerName: 'Username', width: 130 },\n        {\n            field: 'banned', headerName: 'banned', width: 150,\n            renderCell: (params) => (\n                <div>\n                    {params.value ?\n                        <Chip\n                            icon={<Check />}\n                            label=\"True\"\n                            color=\"primary\"\n                            variant=\"outlined\"\n                        />\n                        :\n                        <Chip\n                            icon={<Clear />}\n                            label=\"False\"\n                            color=\"secondary\"\n                            variant=\"outlined\"\n                        />\n\n\n                    }\n                </div>\n\n            ),\n\n        },\n        {\n            field: 'link', headerName: 'Detail', width: 150,\n            renderCell: (params) => (\n\n                <div>\n                    <Button variant=\"contained\" color=\"primary\" onClick={() => { history.push({pathname: `/user/${params.row.id}`}) }}>\n                        View\n                    </Button>\n                </div>\n\n            ),\n\n        },\n    ];\n\n    return (\n        //return a datagrid that lists all the users.\n        <div style={{ height: 400, width: '100%', marginTop: '100px', backgroundColor: 'white' }}>\n            <DataGrid rows={users} columns={columns} pageSize={5} column={columns.map((column) => ({\n                ...column,\n                disableClickEventBubbling: true,\n            }))} />\n        </div>\n    )\n}\n"
+        }
+    ]
+}

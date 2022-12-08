@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "famizonesocialweb",
+    "slug": "famizonesocialweb",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+    "splash": {
+      "image": "./assets/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "useNextNotificationsApi": true,
+      "package": "com.flame270.FamizoneSocialWeb",
+      "googleServicesFile": "./google-services.json",
+      "config": {
+        "googleSignIn": {
+          "apiKey": "AIzaSyAlyg2foGcNZoGw3xqRHzbdARpmv0La3lU"
+        }
+      }
+    },
+    "ios": {
+      "buildNumber": "1.0.0",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.flame270.FamizoneSocialWeb",
+      "config": {
+        "googleSignIn": {
+          "reservedClientId": "765180395182-tfr8u7c6ov74jbsq784h7tu0uab6rnhp.apps.googleusercontent.com"
+        },
+        "googleMapsApiKey": "AIzaSyCKm7ZZOjRNa_cMYPg97igXJ8KByPpuIc4"
+      },
+      "googleServicesFile": "./GoogleService-Info.plist"
+    },
+    "web": {
+      "favicon": "./assets/logo.png"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "admin/src/components/login.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1668733510339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1668733510339,
+            "name": "Commit-0",
+            "content": "/*Tyler Wiggins\nThis is my own work\nSenior Project 2022\nFile Description: This is the admin login page.\n*/\nimport React, { Component, useState, useEffect } from 'react'\nimport { Redirect } from 'react-router-dom'\n\nimport firebase from 'firebase'\n\n//Authenticate the user to ensure they have an Admin role.\nexport default function Login() {\n    const [email, setEmail] = useState('');\n    const [password, setPassword] = useState('')\n\n    const onSignIn = () => {\n        firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {\n        });\n    }\n\n    if (firebase.auth().currentUser == undefined) {\n        return (\n\n            <div className=\"container vertical-center \">\n                <div className=\"auth-wrapper\">\n                    <div className=\"auth-inner\">\n                            <h3>Sign In</h3>\n\n                            <div className=\"form-group\">\n                                <label>Email address</label>\n                                <input type=\"email\" className=\"form-control\" placeholder=\"Enter email\"\n                                    onChange={e => setEmail(e.target.value)}\n                                    value={email} />\n                            </div>\n\n                            <div className=\"form-group\">\n                                <label>Password</label>\n                                <input type=\"password\" className=\"form-control\" placeholder=\"Enter password\"\n                                    value={password}\n                                    onChange={e => setPassword(e.target.value)} />\n                            </div>\n\n                            <button className=\"btn btn-primary btn-block\" onClick={onSignIn}>Submit</button>\n\n                    </div>\n                </div>\n            </div>\n        )\n    }\n}\n"
+        }
+    ]
+}

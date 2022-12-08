@@ -1,0 +1,30 @@
+{
+    "sourceFile": "frontend/redux/constants/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1668736952664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668736973614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n-\n+/*Tyler Wiggins\n+This is my own work\n+Senior Project 2022\n+File Description: This class manages the constants state.\n+*/\n export const USER_STATE_CHANGE = 'USER_STATE_CHANGE'\n export const USER_POSTS_STATE_CHANGE = 'USER_POSTS_STATE_CHANGE'\n export const USER_FOLLOWING_STATE_CHANGE = 'USER_FOLLOWING_STATE_CHANGE'\n export const USER_CHATS_STATE_CHANGE = 'USER_CHATS_STATE_CHANGE'\n"
+                },
+                {
+                    "date": 1668736985310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n /*Tyler Wiggins\n This is my own work\n Senior Project 2022\n-File Description: This class manages the constants state.\n+File Description: This class manages the constants state and updates the states .\n */\n export const USER_STATE_CHANGE = 'USER_STATE_CHANGE'\n export const USER_POSTS_STATE_CHANGE = 'USER_POSTS_STATE_CHANGE'\n export const USER_FOLLOWING_STATE_CHANGE = 'USER_FOLLOWING_STATE_CHANGE'\n"
+                },
+                {
+                    "date": 1668736993328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n /*Tyler Wiggins\n This is my own work\n Senior Project 2022\n-File Description: This class manages the constants state and updates the states .\n+File Description: This class manages the constants state and updates the states when they are changed.\n */\n export const USER_STATE_CHANGE = 'USER_STATE_CHANGE'\n export const USER_POSTS_STATE_CHANGE = 'USER_POSTS_STATE_CHANGE'\n export const USER_FOLLOWING_STATE_CHANGE = 'USER_FOLLOWING_STATE_CHANGE'\n"
+                }
+            ],
+            "date": 1668736952663,
+            "name": "Commit-0",
+            "content": "\nexport const USER_STATE_CHANGE = 'USER_STATE_CHANGE'\nexport const USER_POSTS_STATE_CHANGE = 'USER_POSTS_STATE_CHANGE'\nexport const USER_FOLLOWING_STATE_CHANGE = 'USER_FOLLOWING_STATE_CHANGE'\nexport const USER_CHATS_STATE_CHANGE = 'USER_CHATS_STATE_CHANGE'\n\nexport const USERS_POSTS_STATE_CHANGE = 'USERS_POSTS_STATE_CHANGE'\nexport const USERS_LIKES_STATE_CHANGE = 'USERS_LIKES_STATE_CHANGE'\nexport const USERS_DATA_STATE_CHANGE = 'USERS_DATA_STATE_CHANGE'\n\nexport const USER_FRIENDS_REQUESTS_SENT_STATE_CHANGE = 'USER_FRIDENDS_REQUESTS_SENT_STATE_CHANGE'\nexport const USER_FRIENDS_REQUESTS_RECEIVED_STATE_CHANGE = 'USER_FRIDENDS_REQUESTS_RECEIVED_STATE_CHANGE'\nexport const USER_FRIENDS_STATE_CHANGE = 'USER_FRIDENDS_STATE_CHANGE'\n\nexport const USER_CLEAR_FRIENDS = 'USER_CLEAR_FRIENDS'\n\n\nexport const CLEAR_DATA = 'CLEAR_DATA'\n\n\n\n"
+        }
+    ]
+}

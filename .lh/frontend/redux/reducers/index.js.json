@@ -1,0 +1,22 @@
+{
+    "sourceFile": "frontend/redux/reducers/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1668737001337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668737007817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { combineReducers } from 'redux'\n import { user } from './user'\n import { users } from './users'\n \n-\n+//reduce the users\n const Reducers = combineReducers({\n     userState: user,\n     usersState: users\n })\n"
+                }
+            ],
+            "date": 1668737001337,
+            "name": "Commit-0",
+            "content": "\nimport { combineReducers } from 'redux'\nimport { user } from './user'\nimport { users } from './users'\n\n\nconst Reducers = combineReducers({\n    userState: user,\n    usersState: users\n})\n\nexport default Reducers"
+        }
+    ]
+}

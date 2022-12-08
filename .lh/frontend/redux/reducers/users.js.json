@@ -1,0 +1,26 @@
+{
+    "sourceFile": "frontend/redux/reducers/users.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1668737107780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668737114560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     feed: [],\n     usersFollowingLoaded: 0,\n }\n \n-//Updates \n+//Updates the users and post \n export const users = (state = initialState, action) => {\n     switch (action.type) {\n         case USERS_DATA_STATE_CHANGE:\n             return {\n"
+                },
+                {
+                    "date": 1668737124159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     feed: [],\n     usersFollowingLoaded: 0,\n }\n \n-//Updates the users and post \n+//Updates the users and posts states.\n export const users = (state = initialState, action) => {\n     switch (action.type) {\n         case USERS_DATA_STATE_CHANGE:\n             return {\n"
+                }
+            ],
+            "date": 1668737107780,
+            "name": "Commit-0",
+            "content": "import { CLEAR_DATA, USERS_DATA_STATE_CHANGE, USERS_LIKES_STATE_CHANGE, USERS_POSTS_STATE_CHANGE } from \"../constants\"\n\nconst initialState = {\n    users: [],\n    feed: [],\n    usersFollowingLoaded: 0,\n}\n\n//Updates \nexport const users = (state = initialState, action) => {\n    switch (action.type) {\n        case USERS_DATA_STATE_CHANGE:\n            return {\n                ...state,\n                users: [...state.users, action.user]\n            }\n        case USERS_POSTS_STATE_CHANGE:\n            return {\n                ...state,\n                usersFollowingLoaded: state.usersFollowingLoaded + 1,\n                feed: [...state.feed, ...action.posts]\n            }\n        case USERS_LIKES_STATE_CHANGE:\n            return {\n                ...state,\n                feed: state.feed.map(post => post.id == action.postId ?\n                    { ...post, currentUserLike: action.currentUserLike } :\n                    post)\n            }\n        case CLEAR_DATA:\n            return initialState\n        default:\n            return state;\n    }\n}"
+        }
+    ]
+}

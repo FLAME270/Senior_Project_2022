@@ -1,0 +1,26 @@
+{
+    "sourceFile": "frontend/components/auth/Login.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1664962778344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1664962783757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n //import firebase from 'firebase';\n+\n import React, { useState } from 'react';\n import { Button, Text, TextInput, View } from 'react-native';\n import { container, form } from '../styles';\n \n"
+                },
+                {
+                    "date": 1668734103391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,19 @@\n-//import firebase from 'firebase';\n-\n+/*Tyler Wiggins\n+This is my own work\n+Senior Project 2022\n+File Description: Class that handles all the login functionality.\n+*/\n+import firebase from 'firebase/compat/app';\n import React, { useState } from 'react';\n import { Button, Text, TextInput, View } from 'react-native';\n import { container, form } from '../styles';\n \n export default function Login(props) {\n     const [email, setEmail] = useState('');\n     const [password, setPassword] = useState('');\n \n+    //Authenticates the user by checking the firebase database\n     const onSignUp = () => {\n         firebase.auth().signInWithEmailAndPassword(email, password)\n     }\n \n"
+                }
+            ],
+            "date": 1664962778343,
+            "name": "Commit-0",
+            "content": "//import firebase from 'firebase';\nimport React, { useState } from 'react';\nimport { Button, Text, TextInput, View } from 'react-native';\nimport { container, form } from '../styles';\n\nexport default function Login(props) {\n    const [email, setEmail] = useState('');\n    const [password, setPassword] = useState('');\n\n    const onSignUp = () => {\n        firebase.auth().signInWithEmailAndPassword(email, password)\n    }\n\n    return (\n        <View style={container.center}>\n            <View style={container.formCenter}>\n                <TextInput\n                    style={form.textInput}\n                    placeholder=\"email\"\n                    onChangeText={(email) => setEmail(email)}\n                />\n                <TextInput\n                    style={form.textInput}\n                    placeholder=\"password\"\n                    secureTextEntry={true}\n                    onChangeText={(password) => setPassword(password)}\n                />\n\n                <Button\n                    style={form.button}\n                    onPress={() => onSignUp()}\n                    title=\"Sign In\"\n                />\n            </View>\n\n\n            <View style={form.bottomButton} >\n                <Text\n                    title=\"Register\"\n                    onPress={() => props.navigation.navigate(\"Register\")} >\n                    Don't have an account? SignUp.\n                </Text>\n            </View>\n        </View>\n    )\n}\n\n"
+        }
+    ]
+}
