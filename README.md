@@ -9,13 +9,18 @@
 <h3 align="left">Project Description:</h3><br>
 Developing Famazone Social had many challenges. Integrating Expo with hardware/software components caused compatibility issues with older devices. Extensive troubleshooting and research were needed to fix these.
 <br>
+<br>
 Implementing Redux for performance optimization was complex and led to unexpected bugs. I researched best practices and refactored the code for efficiency.
+<br>
 <br>
 Ensuring user data security with Firebase required fine-tuning Firestore rules and authentication mechanisms. I also added two-factor authentication and encryption for sensitive data.
 <br>
+<br>
 Performance optimization involved profiling the app, using React's memoization, and code-splitting to improve load times. User feedback highlighted navigation and multimedia upload issues, which I fixed with better UI design and error handling.
 <br>
+<br>
 Scalability was ensured by optimizing the database schema, creating indexes, and implementing caching to handle increased traffic.
+<br>
 <br>
 Despite these challenges, Famazone Social became a responsive and reliable platform. Through persistent problem-solving and the strategic use of React Native, Expo, Redux, and Firebase, I turned obstacles into opportunities for learning and improvement.
 
